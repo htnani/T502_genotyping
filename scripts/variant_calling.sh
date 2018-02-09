@@ -3,9 +3,8 @@
 #PBS -N WGS_genotyping_variant_calling_T502
 #PBS -k o
 #PBS -l nodes=1:ppn=16,vmem=40gb
-#PBS -l walltime=1:00:00
+#PBS -l walltime=6:00:00
 #PBS -m abe
-#PBS -q debug
 
 workingdir=/N/dc2/scratch/rtraborn/T502_genotyping
 outDir=/N/dc2/scratch/rtraborn/T502_genotyping/vcf_out
