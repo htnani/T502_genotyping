@@ -90,7 +90,7 @@ cd ${WD}/${fqDir}
   for file1 in `ls EC-*_R1.fastq`; do
     file2=$(basename $file1 _R1.fastq)_R2.fastq
     echo "bwa mem -t $nThreads $KPgenome $file1 $file2 | samtools view > $(basename $file1 _R1.fastq).bam"
-    bwa mem -t $nThreads $ECgenome $file1 $file2 | samtools view -h > $(basename $file1 _R1.fastq).bam
+    bwa mem -t $nThreads $ECgenome $file1 $file2 | samtools view -bh > $(basename $file1 _R1.fastq).bam
   done
 
   cd ${WD}
