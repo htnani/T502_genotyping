@@ -3,7 +3,7 @@
 #PBS -N WGS_genotyping_variant_calling_T502
 #PBS -k o
 #PBS -l nodes=1:ppn=16,vmem=40gb
-#PBS -l walltime=6:00:00
+#PBS -l walltime=4:00:00
 #PBS -m abe
 
 workingdir=/N/dc2/scratch/rtraborn/T502_genotyping
@@ -47,7 +47,7 @@ cd ${bamDir}
 	    echo "=============================================================================="
 	    echo ""
 	    echo "bcftools view -bvcg $(basename $file1 .bam).bcf > $(basename $file1 .bam).bcf"
-	    bcftools view -bvcg $(basename $file1 .bam).raw.bcf > $outDir/$(basename $file1 .bam).bcf
+	    bcftools view -vc $(basename $file1 .bam).raw.bcf > $outDir/$(basename $file1 .bam).bcf
 
 	    echo "VCF file created"
 	    echo ""
@@ -64,7 +64,7 @@ cd ${bamDir}
 	    echo "=============================================================================="
 	    echo ""
 	    echo "bcftools view -bvcg $(basename $file1 .bam).bcf > $(basename $file1 .bam).bcf"
-	    bcftools view -bvcg $(basename $file1 .bam).raw.bcf > $outDir/$(basename $file1 .bam).bcf
+	    bcftools view -vc $(basename $file1 .bam).raw.bcf > $outDir/$(basename $file1 .bam).vcf
 
 	    echo "VCF file created"
 	    echo ""
@@ -81,7 +81,7 @@ cd ${bamDir}
 	    echo "=============================================================================="
 	    echo ""
 	    echo "bcftools view -bvcg $(basename $file1 .bam).bcf > $(basename $file1 .bam).bcf"
-	    bcftools view -bvcg $(basename $file1 .bam).raw.bcf > $outDir/$(basename $file1 .bam).bcf
+	    bcftools view -vc $(basename $file1 .bam).raw.bcf > $outDir/$(basename $file1 .bam).vcf
 
 	    echo "VCF file created"
 	    echo ""
