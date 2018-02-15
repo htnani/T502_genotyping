@@ -3,12 +3,12 @@
 #PBS -N WGS_gatk_variant_calling_T502
 #PBS -k o
 #PBS -l nodes=1:ppn=24,vmem=40gb
-#PBS -l walltime=18:00:00
+#PBS -l walltime=22:00:00
 #PBS -m abe
 
 #### 
-workingdir=/path/to/your/T502_genotyping/directory
-#workingdir=/N/dc2/scratch/rtraborn/T502_genotyping
+#workingdir=/path/to/your/T502_genotyping/directory
+workingdir=/N/dc2/scratch/rtraborn/T502_genotyping
 refDir=fasta
 outDir=/N/dc2/scratch/rtraborn/T502_genotyping/vcf_out
 bamDir=alignments
@@ -306,7 +306,6 @@ $gatk \
 -hets $hetrate \
 -mbq $minBaseScore \
 -out_mode $outmode \
--nt $nThreads \
 -nct 1 \
 -ploidy 1 \
 -o $(basename $BM .markedDup.bam)_output.snps.indels.g.vcf
