@@ -9,18 +9,19 @@ cd fasta
 
 echo "Downloading the genome assembly files"
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
-gzip -d GCF_000005845.2_ASM584v2_genomic.fna.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/025/565/GCF_000025565.1_ASM2556v1/GCF_000025565.1_ASM2556v1_genomic.fna.gz
+gzip -d GCF_000025565.1_ASM2556v1_genomic.fna.gz
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/597/905/GCA_000597905.1_ASM59790v1/GCA_000597905.1_ASM59790v1_genomic.fna.gz
-gzip -d GCA_000597905.1_ASM59790v1_genomic.fna.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/016/305/GCF_000016305.1_ASM1630v1/GCF_000016305.1_ASM1630v1_genomic.fna.gz
+gzip -d GCF_000016305.1_ASM1630v1_genomic.fna.gz
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/467/655/GCA_000467655.2_EC_38VIM1/GCA_000467655.2_EC_38VIM1_genomic.fna.gz
-gzip -d GCA_000467655.2_EC_38VIM1_genomic.fna.gz
 
-ln -s GCF_000005845.2_ASM584v2_genomic.fna E_coli_genome.fasta
-ln -s GCA_000597905.1_ASM59790v1_genomic.fna K_pneumoniae_genome.fasta
-ln -s GCA_000467655.2_EC_38VIM1_genomic.fna E_cloacae_genomic.fasta
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/010/485/GCF_000010485.1_ASM1048v1/GCF_000010485.1_ASM1048v1_genomic.fna.gz
+gzip -d GCF_000010485.1_ASM1048v1_genomic.fna.gz
+
+ln -s GCF_000010485.1_ASM1048v1_genomic.fna E_coli_genome.fasta
+ln -s GCF_000016305.1_ASM1630v1_genomic.fna K_pneumoniae_genome.fasta
+ln -s GCF_000025565.1_ASM2556v1_genomic.fna E_cloacae_genomic.fasta
 
 cd ..
 
@@ -32,18 +33,18 @@ cd annotation
 
 echo "Downloading the genome annotation files."
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gff.gz
-gzip -d GCF_000005845.2_ASM584v2_genomic.gff.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/025/565/GCF_000025565.1_ASM2556v1/GCF_000025565.1_ASM2556v1_genomic.gff.gz
+gzip -d GCF_000025565.1_ASM2556v1_genomic.gff.gz
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/597/905/GCA_000597905.1_ASM59790v1/GCA_000597905.1_ASM59790v1_genomic.gff.gz
-gzip -d GCA_000597905.1_ASM59790v1_genomic.gff.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/016/305/GCF_000016305.1_ASM1630v1/GCF_000016305.1_ASM1630v1_genomic.gff.gz
+gzip -d GCF_000016305.1_ASM1630v1_genomic.gff.gz
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/467/655/GCA_000467655.2_EC_38VIM1/GCA_000467655.2_EC_38VIM1_genomic.gff.gz
-gzip -d GCA_000467655.2_EC_38VIM1_genomic.gff.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/010/485/GCF_000010485.1_ASM1048v1/GCF_000010485.1_ASM1048v1_genomic.gff.gz
+gzip -d GCF_000010485.1_ASM1048v1_genomic.gff.gz
 
-ln -s GCF_000005845.2_ASM584v2_genomic.gff E_coli_annotation.gff
-ln -s GCA_000597905.1_ASM59790v1_genomic.gff K_pneumoniae_annotation.gff
-ln -s GCA_000467655.2_EC_38VIM1_genomic.gff E_cloacae_annotation.gff
+ln -s GCF_000010485.1_ASM1048v1_genomic.gff E_coli_annotation.gff
+ln -s GCF_000016305.1_ASM1630v1_genomic.gff K_pneumoniae_annotation.gff
+ln -s GCF_000025565.1_ASM2556v1_genomic.gff E_cloacae_annotation.gff
 
 cd ..
 
