@@ -46,6 +46,12 @@ ln -s GCF_000010485.1_ASM1048v1_genomic.gff E_coli_annotation.gff
 ln -s GCF_000016305.1_ASM1630v1_genomic.gff K_pneumoniae_annotation.gff
 ln -s GCF_000025565.1_ASM2556v1_genomic.gff E_cloacae_annotation.gff
 
+wget https://card.mcmaster.ca/download/6/prevalence-v2.0.0.tar.gz
+tar xvf prevalence-v2.0.0.tar.gz
+
+ln -s GCF_000025565.1_ASM2556v1_genomic.gff E_cloacae_annotation.gff
+ln -s protein_fasta_protein_variant_model_variants.fasta model_variants.fasta
+
 cd ..
 
 echo "Download complete."
