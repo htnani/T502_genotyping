@@ -3,7 +3,7 @@
 #PBS -N WGS_gatk_variant_calling_T502
 #PBS -k o
 #PBS -l nodes=1:ppn=24,vmem=40gb
-#PBS -l walltime=22:00:00
+#PBS -l walltime=18:00:00
 #PBS -m abe
 
 #### 
