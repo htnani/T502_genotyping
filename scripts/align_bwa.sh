@@ -3,7 +3,7 @@
 #PBS -N WGS_genotyping_align_T502
 #PBS -k o
 #PBS -l nodes=1:ppn=16,vmem=40gb
-#PBS -l walltime=1:00:00
+#PBS -l walltime=16:00:00
 #PBS -m abe
 
 module load bwa
@@ -11,8 +11,8 @@ module load samtools
 
 fileDir=/N/dc2/scratch/rtraborn/T502_fastqs/Genotyping_Ecoli_new
 ####### Before running the script, please enter path to desired output directory, below ####
-#WD=/N/dc2/scratch/rtraborn/T502_genotyping/
-WD=<enter/path/to/T502_genotyping/>
+WD=/N/dc2/scratch/rtraborn/T502_genotyping/
+#WD=<enter/path/to/T502_genotyping/>
 fqDir=fastqs
 genomedir=${WD}/fasta
 KPgenome=${genomedir}/K_pneumoniae_genome.fasta
