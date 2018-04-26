@@ -26,21 +26,21 @@ echo ""
 
 cd $bamDir
 
-for BM in `ls KP-*.rh_realigned.bam`; do
+for VCF in `ls KP-*.vcf`; do
 
-bedtools intersect -c -a ../annotation/$KP_annot -b $(basename $BM .rh_realigned.bam)_output.snps.indels.g.vcf > $(basename $BM .rh_realigned.bam)_intersect.gff3
-
-done
-
-for BM in `ls ECL-*.rh_realigned.bam`; do
-
-bedtools intersect -c -a ../annotation/$ECL_annot -b $(basename $BM .rh_realigned.bam)_output.snps.indels.g.vcf > $(basename $BM .rh_realigned.bam)_intersect.gff3
+bedtools intersect -c -a ../annotation/$KP_annot -b $VCF > $(basename $VCF .vcf)_intersect.gff3
 
 done
 
-for BM in `ls EC-*.rh_realigned.bam`; do
+#for BM in `ls ECL-*.vcf`; do
 
-bedtools intersect -c -a ../annotation/$EC_annot -b $(basename $BM .rh_realigned.bam)_output.snps.indels.g.vcf > $(basename $BM .rh_realigned.bam)_intersect.gff3
+#bedtools intersect -c -a ../annotation/$ECL_annot -b $VCF > $(basename $VCF .vcf)_intersect.gff3
+
+#done
+
+for VCF in `ls EC-*.vcf`; do
+
+bedtools intersect -c -a ../annotation/$EC_annot -b $VCF > $(basename $VCF .vcf)_intersect.gff3
 
 done
 
